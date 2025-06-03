@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "profilePicUrl": "https://images.pexels.com/photos/32272421/pexels-photo-32272421.png",
+    "aboutMe": "Admin platform Skelvia, bertanggung jawab atas manajemen konten.",
+    "sumGraduate": 0,
+    "UserId": 1
+  },
+  {
+    "id": 2,
+    "profilePicUrl": "https://images.pexels.com/photos/8891830/pexels-photo-8891830.jpeg",
+    "aboutMe": "Dosen dan mentor di bidang Pemrograman dan Teknologi Web.",
+    "sumGraduate": 0,
+    "UserId": 2
+  },
+  {
+    "id": 3,
+    "profilePicUrl": "https://images.pexels.com/photos/4456472/pexels-photo-4456472.jpeg",
+    "aboutMe": "Mahasiswa baru yang ingin mendalami data science.",
+    "sumGraduate": 2,
+    "UserId": 3
+  },
+  {
+    "id": 4,
+    "profilePicUrl": "https://images.pexels.com/photos/4820606/pexels-photo-4820606.jpeg",
+    "aboutMe": "Fresh graduate yang tertarik ke pengembangan mobile apps.",
+    "sumGraduate": 1,
+    "UserId": 4
+  },
+  {
+    "id": 5,
+    "profilePicUrl": "https://images.pexels.com/photos/8207741/pexels-photo-8207741.jpeg",
+    "aboutMe": "Ingin beralih karier ke bidang UI/UX design.",
+    "sumGraduate": 0,
+    "UserId": 5
+  }
+]

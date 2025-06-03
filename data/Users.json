@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "fullName": "Aditya Pratama",
+    "username": "adityap",
+    "email": "aditya.pratama@example.com",
+    "password": "PasswordAditya1!",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "fullName": "Dewi Kusuma",
+    "username": "dewi.k",
+    "email": "dewi.kusuma@example.com",
+    "password": "DewiSecure#2",
+    "role": "teacher"
+  },
+  {
+    "id": 3,
+    "fullName": "Rizal Fauzi",
+    "username": "rizalf",
+    "email": "rizal.fauzi@example.com",
+    "password": "RizalPass$$3",
+    "role": "student"
+  },
+  {
+    "id": 4,
+    "fullName": "Siska Indriani",
+    "username": "siska.i",
+    "email": "siska.indriani@example.com",
+    "password": "Siska1234##",
+    "role": "student"
+  },
+  {
+    "id": 5,
+    "fullName": "Budi Santoso",
+    "username": "budi.s",
+    "email": "budi.santoso@example.com",
+    "password": "BudiStrong_5",
+    "role": "student"
+  }
+]

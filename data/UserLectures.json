@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "UserId": 3,
+    "LectureId": 1
+  },
+  {
+    "id": 2,
+    "UserId": 3,
+    "LectureId": 2
+  },
+  {
+    "id": 3,
+    "UserId": 3,
+    "LectureId": 3
+  },
+  {
+    "id": 4,
+    "UserId": 3,
+    "LectureId": 4
+  },
+  {
+    "id": 5,
+    "UserId": 4,
+    "LectureId": 1
+  },
+  {
+    "id": 6,
+    "UserId": 4,
+    "LectureId": 5
+  },
+  {
+    "id": 7,
+    "UserId": 4,
+    "LectureId": 6
+  },
+  {
+    "id": 8,
+    "UserId": 5,
+    "LectureId": 2
+  },
+  {
+    "id": 9,
+    "UserId": 5,
+    "LectureId": 4
+  },
+  {
+    "id": 10,
+    "UserId": 5,
+    "LectureId": 7
+  }
+]

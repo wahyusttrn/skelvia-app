@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "title": "Variabel dan Tipe Data",
+    "challengeDetail": "Jelaskan jenis-jenis tipe data dasar di Python (integer, float, string, boolean), lalu buat contoh penggunaan masing-masing tipe data tersebut dalam kode Python.",
+    "LectureId": 1
+  },
+  {
+    "id": 2,
+    "title": "Struktur Kontrol",
+    "challengeDetail": "Buatlah sebuah fungsi Python yang menerima satu parameter angka, lalu cetak 'Genap' jika angka tersebut genap, dan 'Ganjil' jika ganjil. Sertakan contoh pemanggilan fungsi tersebut.",
+    "LectureId": 1
+  },
+  {
+    "id": 3,
+    "title": "List dan Dictionary",
+    "challengeDetail": "Tuliskan contoh pembuatan list dan dictionary di Python. Kemudian, buatlah fungsi yang mengiterasi list dan menampilkan setiap elemen beserta key-value pair dari dictionary.",
+    "LectureId": 1
+  },
+  {
+    "id": 4,
+    "title": "HTML Dasar",
+    "challengeDetail": "Buatlah struktur HTML sederhana yang terdiri dari header, main content, dan footer. Sertakan tag `<nav>` dan `<section>` sesuai praktik terbaik (best practice).",
+    "LectureId": 2
+  },
+  {
+    "id": 5,
+    "title": "CSS Layout",
+    "challengeDetail": "Buatlah halaman web dengan layout dua kolom menggunakan CSS Flexbox. Kolom kiri berlebar 30%, kolom kanan 70%, dan masing-masing memiliki latar belakang berbeda.",
+    "LectureId": 2
+  },
+  {
+    "id": 6,
+    "title": "JavaScript Interaktif",
+    "challengeDetail": "Tuliskan kode JavaScript untuk membuat tombol yang, ketika diklik, akan mengubah teks di dalam `<p>` dari 'Hello' menjadi 'Hello, Skelvia!'.",
+    "LectureId": 2
+  },
+  {
+    "id": 7,
+    "title": "Membuat Tabel SQL",
+    "challengeDetail": "Desain sebuah tabel `users` di SQL dengan kolom: id (INTEGER, primary key), name (VARCHAR), email (VARCHAR, unique), dan created_at (TIMESTAMP). Sertakan statement CREATE TABLE lengkap.",
+    "LectureId": 3
+  },
+  {
+    "id": 8,
+    "title": "Query Dasar SELECT",
+    "challengeDetail": "Diberikan tabel `orders(order_id, user_id, product, total_price)`, tuliskan query SQL untuk menampilkan semua order dengan total_price lebih dari 500000.",
+    "LectureId": 3
+  },
+  {
+    "id": 9,
+    "title": "JOIN Dua Tabel",
+    "challengeDetail": "Diberikan tabel `users` dan `orders`, buatlah query SQL untuk menampilkan nama pengguna dan produk yang dipesan, dengan menggunakan JOIN antara kedua tabel.",
+    "LectureId": 3
+  },
+  {
+    "id": 10,
+    "title": "Konsep Big O Notation",
+    "challengeDetail": "Jelaskan apa itu Big O Notation dan berikan contoh algoritma dengan kompleksitas O(n), O(n log n), dan O(n²).",
+    "LectureId": 4
+  },
+  {
+    "id": 11,
+    "title": "Implementasi Linked List",
+    "challengeDetail": "Tuliskan kelas (class) LinkedList di Python yang mendukung operasi: insert di awal, insert di akhir, dan traversal untuk mencetak semua elemen.",
+    "LectureId": 4
+  },
+  {
+    "id": 12,
+    "title": "Sorting Algoritma",
+    "challengeDetail": "Implementasikan algoritma bubble sort dan quick sort dalam Python, lalu bandingkan waktu eksekusi (secara singkat dijelaskan).",
+    "LectureId": 4
+  },
+  {
+    "id": 13,
+    "title": "Setup React Native",
+    "challengeDetail": "Jelaskan cara menginstal dan memulai proyek React Native dari awal. Sertakan perintah CLI dan contoh file App.js minimal.",
+    "LectureId": 5
+  },
+  {
+    "id": 14,
+    "title": "Komponen Dasar React Native",
+    "challengeDetail": "Buatlah sebuah komponen React Native yang menampilkan header, teks, dan tombol. Saat tombol ditekan, tampilkan alert sederhana.",
+    "LectureId": 5
+  },
+  {
+    "id": 15,
+    "title": "State dan Props",
+    "challengeDetail": "Jelaskan perbedaan antara state dan props dalam React Native. Buat contoh kecil satu parent dan satu child component, di mana parent mengirimkan nilai via props.",
+    "LectureId": 5
+  },
+  {
+    "id": 16,
+    "title": "User Research Basics",
+    "challengeDetail": "Jelaskan apa itu user research dalam konteks UI/UX. Sebutkan minimal tiga metode yang biasa digunakan dan contohnya.",
+    "LectureId": 6
+  },
+  {
+    "id": 17,
+    "title": "Wireframing",
+    "challengeDetail": "Buatlah wireframe sederhana untuk halaman landing page sebuah aplikasi mobile. Anda boleh menjelaskan secara teks elemen apa saja yang ada di tiap bagian.",
+    "LectureId": 6
+  },
+  {
+    "id": 18,
+    "title": "Typography & Color Theory",
+    "challengeDetail": "Jelaskan prinsip dasar penggunaan tipografi dan teori warna untuk UI/UX. Sertakan contoh kombinasi warna yang cocok untuk tema gelap.",
+    "LectureId": 6
+  },
+  {
+    "id": 19,
+    "title": "Data Preprocessing",
+    "challengeDetail": "Diberikan dataset dalam bentuk CSV dengan data yang hilang (missing) dan outlier, jelaskan langkah-langkah preprocessing (handling missing, normalisasi, dst.) secara singkat.",
+    "LectureId": 7
+  },
+  {
+    "id": 20,
+    "title": "Implementasi Regresi Linear",
+    "challengeDetail": "Tuliskan kode Python menggunakan library scikit-learn untuk membuat model regresi linear sederhana, termasuk membagi data train-test.",
+    "LectureId": 7
+  },
+  {
+    "id": 21,
+    "title": "Evaluasi Model",
+    "challengeDetail": "Jelaskan metrik evaluasi yang digunakan pada regresi (MSE, RMSE, R²). Sertakan contoh perhitungan sederhana.",
+    "LectureId": 7
+  },
+  {
+    "id": 22,
+    "title": "ES6 Modules & Import/Export",
+    "challengeDetail": "Jelaskan bagaimana cara membuat dan menggunakan ES6 modules. Buat contoh dua file JavaScript: satu mengekspor fungsi, satu mengimpor dan memanggilnya.",
+    "LectureId": 8
+  },
+  {
+    "id": 23,
+    "title": "Arrow Function dan Destructuring",
+    "challengeDetail": "Tulis contoh penggunaan arrow function, object destructuring, dan array destructuring dalam satu potongan kode JavaScript.",
+    "LectureId": 8
+  },
+  {
+    "id": 24,
+    "title": "Asynchronous & Promises",
+    "challengeDetail": "Jelaskan perbedaan antara callback, promise, dan async/await. Buat contoh kode yang menggunakan `fetch` API dengan async/await.",
+    "LectureId": 8
+  },
+  {
+    "id": 25,
+    "title": "Membuat Grafik dengan Matplotlib",
+    "challengeDetail": "Tuliskan kode Python untuk menampilkan scatter plot dari dua array numerik menggunakan Matplotlib. Sertakan judul dan label sumbu.",
+    "LectureId": 9
+  },
+  {
+    "id": 26,
+    "title": "Plot Interaktif dengan Plotly",
+    "challengeDetail": "Jelaskan cara membuat plot interaktif menggunakan Plotly Express. Buat contoh kode yang menampilkan bar chart dari data sederhana.",
+    "LectureId": 9
+  },
+  {
+    "id": 27,
+    "title": "Dashboard Sederhana",
+    "challengeDetail": "Buatlah sketsa (deskripsi teks) dashboard yang menampilkan tiga jenis grafik (bar, line, pie) untuk data penjualan bulanan.",
+    "LectureId": 9
+  },
+  {
+    "id": 28,
+    "title": "Layanan EC2 dan S3",
+    "challengeDetail": "Jelaskan perbedaan antara EC2 dan S3 di AWS. Sertakan langkah singkat untuk membuat instance EC2 lewat AWS Console.",
+    "LectureId": 10
+  },
+  {
+    "id": 29,
+    "title": "Setup IAM User",
+    "challengeDetail": "Jelaskan cara membuat IAM user di AWS, beserta kebijakan (policy) minimal untuk mengakses layanan S3 saja.",
+    "LectureId": 10
+  },
+  {
+    "id": 30,
+    "title": "Deploy Aplikasi ke EC2",
+    "challengeDetail": "Tuliskan langkah-langkah untuk men-deploy aplikasi Node.js sederhana ke EC2, termasuk instalasi Node dan pengaturan security group.",
+    "LectureId": 10
+  }
+]

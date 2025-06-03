@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "answer": "Saya telah membuat fungsi yang menerima angka dan mengecek ganjil/genap. Contoh: `def cek_ganjil_genap(x): return 'Genap' if x % 2 == 0 else 'Ganjil'`.",
+    "ChallengeId": 2,
+    "UserId": 3
+  },
+  {
+    "id": 2,
+    "answer": "Berikut contoh list dan dictionary di Python beserta fungsi iterasi: `my_list = [1,2,3]; my_dict = {'a': 1, 'b': 2}`; `for i in my_list: print(i)`; `for k,v in my_dict.items(): print(k, v)`.",
+    "ChallengeId": 3,
+    "UserId": 3
+  },
+  {
+    "id": 3,
+    "answer": "Tipe data di Python: int, float, str, bool. Contoh: `a = 5` (int), `b = 3.14` (float), `c = 'Hello'` (string), `d = True` (boolean).",
+    "ChallengeId": 1,
+    "UserId": 3
+  },
+  {
+    "id": 4,
+    "answer": "CREATE TABLE users (id INTEGER PRIMARY KEY, name VARCHAR(100), email VARCHAR(100) UNIQUE, created_at TIMESTAMP);",
+    "ChallengeId": 7,
+    "UserId": 3
+  },
+  {
+    "id": 5,
+    "answer": "SELECT * FROM orders WHERE total_price > 500000;",
+    "ChallengeId": 8,
+    "UserId": 3
+  },
+  {
+    "id": 6,
+    "answer": "SELECT users.name, orders.product FROM users JOIN orders ON users.id = orders.user_id;",
+    "ChallengeId": 9,
+    "UserId": 3
+  },
+  {
+    "id": 7,
+    "answer": "Big O Notation adalah cara menggambarkan kompleksitas algoritma. Contohnya: Linear Search O(n), Merge Sort O(n log n), Bubble Sort O(n²).",
+    "ChallengeId": 10,
+    "UserId": 3
+  },
+  {
+    "id": 8,
+    "answer": "Berikut implementasi kelas LinkedList di Python dengan metode insert dan traversal untuk mencetak elemen-elemen.",
+    "ChallengeId": 11,
+    "UserId": 3
+  },
+  {
+    "id": 9,
+    "answer": "Bubble sort dan quick sort di Python sudah saya tulis. Bubble sort lebih lambat O(n²), quick sort rata-rata O(n log n).",
+    "ChallengeId": 12,
+    "UserId": 3
+  },
+  {
+    "id": 10,
+    "answer": "Berikut kode untuk instalasi React Native project: `npx react-native init MyApp`, lalu di App.js saya menampilkan teks 'Hello Skelvia'.",
+    "ChallengeId": 13,
+    "UserId": 4
+  },
+  {
+    "id": 11,
+    "answer": "Komponen React Native: Saya buat View dengan Text dan Button. Pada onPress button saya panggil `Alert.alert(\"Button ditekan!\")`.",
+    "ChallengeId": 14,
+    "UserId": 4
+  },
+  {
+    "id": 12,
+    "answer": "State menyimpan data internal komponen, props untuk data dari parent. Contoh: Parent `{ value: 'Halo' }`, child menerima via `props.value`.",
+    "ChallengeId": 15,
+    "UserId": 4
+  }
+]

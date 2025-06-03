@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Python",
+    "lecturerName": "Dewi Kusuma",
+    "imageUrl": "https://images.pexels.com/photos/5496459/pexels-photo-5496459.jpeg",
+    "difficulty": "general",
+    "price": 150000,
+    "upVote": 45
+  },
+  {
+    "id": 2,
+    "title": "Frontend Web Development Dasar",
+    "lecturerName": "Dewi Kusuma",
+    "imageUrl": "https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg",
+    "difficulty": "general",
+    "price": 175000,
+    "upVote": 62
+  },
+  {
+    "id": 3,
+    "title": "Database & SQL untuk Pemula",
+    "lecturerName": "Dewi Kusuma",
+    "imageUrl": "https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg",
+    "difficulty": "medium",
+    "price": 200000,
+    "upVote": 30
+  },
+  {
+    "id": 4,
+    "title": "Data Structures dan Algoritma",
+    "lecturerName": "Dewi Kusuma",
+    "imageUrl": "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
+    "difficulty": "medium",
+    "price": 225000,
+    "upVote": 51
+  },
+  {
+    "id": 5,
+    "title": "Mobile App Development dengan React Native",
+    "lecturerName": "Dewi Kusuma",
+    "imageUrl": "https://images.pexels.com/photos/17485657/pexels-photo-17485657.png",
+    "difficulty": "medium",
+    "price": 250000,
+    "upVote": 48
+  },
+  {
+    "id": 6,
+    "title": "Dasar-dasar UI/UX Design",
+    "lecturerName": "Ahmed Muhammad",
+    "imageUrl": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg",
+    "difficulty": "general",
+    "price": 150000,
+    "upVote": 27
+  },
+  {
+    "id": 7,
+    "title": "Machine Learning untuk Pemula",
+    "lecturerName": "Dewi Kusuma",
+    "imageUrl": "https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg",
+    "difficulty": "expert",
+    "price": 300000,
+    "upVote": 75
+  },
+  {
+    "id": 8,
+    "title": "Advanced JavaScript dan ES6+",
+    "lecturerName": "Dewi Kusuma",
+    "imageUrl": "https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg",
+    "difficulty": "expert",
+    "price": 275000,
+    "upVote": 64
+  },
+  {
+    "id": 9,
+    "title": "Data Visualization dengan Python",
+    "lecturerName": "Dewi Kusuma",
+    "imageUrl": "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg",
+    "difficulty": "medium",
+    "price": 225000,
+    "upVote": 38
+  },
+  {
+    "id": 10,
+    "title": "Cloud Computing & AWS Basics",
+    "lecturerName": "Dewi Kusuma",
+    "imageUrl": "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg",
+    "difficulty": "expert",
+    "price": 320000,
+    "upVote": 58
+  }
+]
