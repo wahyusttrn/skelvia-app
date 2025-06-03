@@ -52,6 +52,7 @@ npx sequelize seed:create --name seed-UserLectures
 
 ## After Clone (??)
 ```
+npm i
 npx sequelize db:create
 npx sequelize db:migrate
 npx sequelize db:seed:all
