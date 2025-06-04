@@ -4,4 +4,5 @@ const Profile = require('../controllers/profile');
 
 // router.get('/', );
 
+router.get('/profile', Profile.showProfile)
 module.exports = router;

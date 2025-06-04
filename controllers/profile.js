@@ -14,6 +14,7 @@ class Profile {
             res.send(err);
         }
     }
+
 }
 
 module.exports = Profile;

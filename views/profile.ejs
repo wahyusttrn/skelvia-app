@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Profile: <%= user.fullName %></h1>
+    <table border="1">
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+        </tr>
+        <tr>
+            <td><%= user.username %></td>
+            <td><%= user.email %></td>
+            <td><%= user.role %></td>
+        </tr>
+    </table>
+
+    <h2>Profile Details</h2>
+    <% if (user.UserProfile) { %>
+        <table border="1">
+            <tr>
+                <th>Photo</th>
+                <th>About Me</th>
+                <th>Graduated Courses</th>
+            </tr>
+            <tr>
+                <td><img src="<%= user.UserProfile.profilePicUrl %>" width="100"></td>
+                <td><%= user.UserProfile.aboutMe %></td>
+                <td><%= user.UserProfile.sumGraduate %></td>
+            </tr>
+        </table>
+    <% } %>
+    <br>
+    
+</body>
+</html>
