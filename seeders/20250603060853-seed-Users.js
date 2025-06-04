@@ -2,6 +2,8 @@
 
 const fs = require('fs').promises;
 
+const { hashPass } = require('../helpers/helper');
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
@@ -10,6 +12,7 @@ module.exports = {
       delete e.id;
       e.createdAt = new Date();
       e.updatedAt = new Date();
+      e.password = hashPass(e.password);
       return e;
     });
 
