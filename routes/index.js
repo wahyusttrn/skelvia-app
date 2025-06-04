@@ -24,6 +24,6 @@ router.get('/logout', Main.handlerLogout);
 
 router.use('/lectures', lectureRoutes);
 router.use('/profile', authMiddleware, profileRoutes);
-router.use('/myLecture', authMiddleware, myLectureRoutes);
+router.use('/myLectures', authMiddleware, myLectureRoutes);
 
 module.exports = router;

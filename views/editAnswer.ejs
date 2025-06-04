@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skelvia</title>
+</head>
+<body>
+  <h1><%= challenge.title %></h1>
+  <h3><u>Question:</u> <%= challenge.challengeDetail %></h3>
+  <form action="/myLectures/<%= challenge.LectureId %>/challenges/<%= challenge.id %>/edit" method="post">
+    <label for="">Your previous Answer:</label>
+    <br>
+    <textarea name="answer" id="" rows="4" cols="50"><%= userWork.answer %></textarea>
+    <br>
+    <button value="SUBMIT" type="submit">Edit My Answer</button>
+  </form>
+  <hr>
+  <a href="/myLectures/<%= challenge.LectureId %>/challenges/<%= challenge.id %>/delete" style="color: tomato;">Delete my Answer</a>
+</body>
+</html>

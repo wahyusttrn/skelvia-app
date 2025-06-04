@@ -10,7 +10,8 @@
     <a href="/login">Login</a> ||
     <a href="/register">Register</a>
     <% if (user) { %>
-      <a href="/logout">Logout Bang</a>
+      <a href="/logout">Logout Bang</a> ||
+      <a href="/myLectures">My Lectures</a>
     <% } %>
   </nav>
   <h1>Hello, <%= user ? user.fullName : 'Skelvians' %>!</h1>
