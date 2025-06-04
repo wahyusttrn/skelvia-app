@@ -1,6 +1,6 @@
 const { Lecture, Challenge, UserLecture, User } = require('../models/index');
 
-class Lecture {
+class LectureController {
     static async listLectures(req, res) {
         try {
             let lectures = await Lecture.findAll({
@@ -18,4 +18,4 @@ class Lecture {
     
 }
 
-module.exports = Lecture;
+module.exports = LectureController;

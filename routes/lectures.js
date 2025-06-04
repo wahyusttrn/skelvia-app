@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Lecture = require('../controllers/lecture');
+const LectureController = require('../controllers/lecture');
 
 // router.get('/', );
 
