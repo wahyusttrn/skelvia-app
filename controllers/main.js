@@ -34,9 +34,12 @@ class Main {
           req.session.role = user.role;
           res.redirect('/');
         } else {
-          const error = 'Email or Password is wrong'
+          const error = 'Email or Password is wrong';
           res.redirect(`/login?error=${error}`);
         }
+      } else {
+        const error = 'Email not found';
+        res.redirect(`/login?error=${error}`);
       }
     } catch (error) {
       res.send(error);

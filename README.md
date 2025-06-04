@@ -69,10 +69,9 @@ POST '/register' __(Register page)__
 
 GET '/profile' __(Shows my profile detail)__
 
-GET '/lectures' __(Shows all Lectures and the Challenges title)__
+GET '/lectures' __(Shows all Lectures and the Challenges title)__ ===(tambah search/sort)
 GET '/lectures/:lectureId' __(Shows lecture details)__
-GET '/lectures/:lectureId'/buy __(Buy lecture, add UserLectures)__
-GET '/lectures/:lectureId'/buy __(Buy lecture, add UserLectures)__
+GET '/lectures/:lectureId'/buy __(Buy lecture, add UserLectures)__ ====(MVP unik, receipt kedownload)
 
 GET '/myLectures' __(Shows all my lecture)__
 GET '/myLectures/:lectureId' __(Shows my lecture detail and all the Challenges)__
@@ -81,3 +80,6 @@ POST '/myLectures/:lectureId/challenges/:challengeId' __(POST answer)__
 GET '/myLectures/:lectureId/challenges/:challengeId/edit' __(Edit answer)__
 POST '/myLectures/:lectureId/challenges/:challengeId/edit' __(POST answer)__
 GET '/myLectures/:lectureId/challenges/:challengeId/delete' __(Delete answer)__
+
+
+====== beda role, beda fitur!
