@@ -27,6 +27,7 @@ class MyLecture {
     try {
       const { lectureId, challengeId } = req.params;
       const { userId } = req.session;
+      const { error } = req.query;
 
       const userWork = await UserWork.findOne({
         where: {
@@ -39,15 +40,15 @@ class MyLecture {
         res.redirect(`/myLectures/${lectureId}/challenges/${challengeId}/edit`);
       } else {
         const challenge = await Challenge.findByPk(challengeId);
-        res.render('answerBox', { challenge });
+        res.render('answerBox', { challenge, error });
       }
     } catch (error) {
       res.send(error);
     }
   }
   static async handlerChallenge(req, res) {
+    const { challengeId, lectureId } = req.params;
     try {
-      const { challengeId, lectureId } = req.params;
       const { userId } = req.session;
       const { answer } = req.body;
 
@@ -59,13 +60,22 @@ class MyLecture {
 
       res.redirect(`/myLectures/${lectureId}`);
     } catch (error) {
-      res.send(error);
+      if (error.name === 'SequelizeValidationError') {
+        const errorMsg = error.errors.map((e) => {
+          return e.message;
+        });
+
+        res.redirect(`/myLectures/${lectureId}/challenges/${challengeId}?error=${errorMsg}`);
+      } else {
+        res.send(error);
+      }
     }
   }
   static async renderEditChallenge(req, res) {
     try {
       const { challengeId } = req.params;
       const { userId } = req.session;
+      const { error } = req.query;
 
       const challenge = await Challenge.findByPk(challengeId);
       const userWork = await UserWork.findOne({
@@ -75,14 +85,14 @@ class MyLecture {
         }
       });
 
-      res.render('editAnswer', {challenge, userWork });
+      res.render('editAnswer', { challenge, userWork, error });
     } catch (error) {
       res.send(error);
     }
   }
   static async handlerEditChallenge(req, res) {
+    const { challengeId, lectureId } = req.params;
     try {
-      const { challengeId, lectureId } = req.params;
       const { userId } = req.session;
       const { answer } = req.body;
 
@@ -97,7 +107,15 @@ class MyLecture {
 
       res.redirect(`/myLectures/${lectureId}`);
     } catch (error) {
-      res.send(error);
+      if (error.name === 'SequelizeValidationError') {
+        const errorMsg = error.errors.map((e) => {
+          return e.message;
+        });
+        
+        res.redirect(`/myLectures/${lectureId}/challenges/${challengeId}/edit?error=${errorMsg}`);
+      } else {
+        res.send(error);
+      }
     }
   }
   static async handlerDeleteChallenge(req, res) {

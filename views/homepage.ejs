@@ -7,14 +7,21 @@
 </head>
 <body>
   <nav>
-    <a href="/login">Login</a> ||
-    <a href="/register">Register</a>
+    <a href="/lectures">Our Lectures</a> ||
+    <% if (!user) { %>
+      <a href="/login">Login</a> ||
+      <a href="/register">Register</a> ||
+    <% } %>
     <% if (user) { %>
       <a href="/logout">Logout Bang</a> ||
-      <a href="/myLectures">My Lectures</a>
+      <a href="/myLectures">My Lectures</a> ||
+      <a href="/profile">Show Profile</a>
     <% } %>
   </nav>
   <h1>Hello, <%= user ? user.fullName : 'Skelvians' %>!</h1>
+  <% if (user) { %>
+    <img src="<%= user.UserProfile.profilePicUrl %>" alt="" height="200">
+  <% } %>
   <p>Skelvia is a educational platform designed to bridge the gap between online courses, immersive bootcamps, and traditional form of education. It offers a highly curated, cohort-based learning experience where students can enroll in multiple classes with a maximum limit, ensuring focused and effective skill acquisition.</p>
 </body>
 </html>

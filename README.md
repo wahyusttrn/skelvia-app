@@ -69,9 +69,9 @@ POST '/register' __(Register page)__
 
 GET '/profile' __(Shows my profile detail)__
 
-GET '/lectures' __(Shows all Lectures and the Challenges title)__ ===(tambah search/sort)
+GET '/lectures' __(Shows all Lectures and the Challenges title)__
 GET '/lectures/:lectureId' __(Shows lecture details)__
-GET '/lectures/:lectureId'/buy __(Buy lecture, add UserLectures)__ ====(MVP unik, receipt kedownload)
+GET '/lectures/:lectureId'/buy __(Buy lecture, add UserLectures)__
 
 GET '/myLectures' __(Shows all my lecture)__
 GET '/myLectures/:lectureId' __(Shows my lecture detail and all the Challenges)__

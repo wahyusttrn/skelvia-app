@@ -10,7 +10,23 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   UserWork.init({
-    answer: DataTypes.TEXT,
+    answer: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: 'Jawaban gaboleh Null'
+        },
+        notEmpty: {
+          msg: 'Jawaban gaboleh kosong'
+        },
+        isTwoWords(value) {
+          if (value.split(' ').length < 2) {
+            throw new Error('Minimal 2 kata lah brok!');
+          }
+        }
+      }
+    },
     ChallengeId: DataTypes.INTEGER,
     UserId: DataTypes.INTEGER
   }, {

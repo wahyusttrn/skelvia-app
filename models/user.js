@@ -14,6 +14,12 @@ module.exports = (sequelize, DataTypes) => {
       User.belongsToMany(models.Lecture, { through: 'UserLecture', foreignKey: 'UserId' });
       // User.belongsToMany(models.Challenge, { through: 'UserWork', foreignKey: 'UserId' });
     }
+
+    static async myFullProfiles(id) {
+      return await User.findByPk(id, {
+        include: 'UserProfile'
+      });
+    }
   }
   User.init({
     fullName: {

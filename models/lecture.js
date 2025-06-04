@@ -9,6 +9,14 @@ module.exports = (sequelize, DataTypes) => {
       Lecture.hasMany(models.UserLecture);
       Lecture.belongsToMany(models.User, { through: 'UserLecture', foreignKey: 'LectureId' });
     }
+
+    get reviews() {
+      if (this.upVote > 50) {
+        return 'Recomended!!!!!!';
+      } else {
+        return 'Kureng sih 👎';
+      }
+    }
   }
   Lecture.init({
     title: DataTypes.STRING,

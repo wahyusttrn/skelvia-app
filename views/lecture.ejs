@@ -3,37 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture</title>
+    <title>Skelvia</title>
 </head>
 <body>
-
-    <h1>Lecture : <%= data.title %></h1>
-    <ul>
-        <% lectures.forEach(lecture => { %>
-            <% if (lecture.id !== data.id) { %>
-                <li><a href="/lectures/<%= lecture.id %>"><%= lecture.title %></a></li>
-            <% } %>
-        <% }) %>
-    </ul>
-
+    <h1>All our Lectures</h1>
+    <% if (error) { %>
+        <p style="color: tomato;"><%= error %></p>
+    <% } %>
+    <form action="/lectures" method="get">
+        <input type="text" name="search" placeholder="search here...">
+        <button value="SUBMIT" type="submit">Search</button>
+    </form>
     <br>
     <table border="1">
+        <thead>
         <tr>
-            <th>No</th>
-            <th>Challenge Title</th>
-            <th>Description</th>
+            <th>No.</th>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Difficulty</th>
+            <th>Price</th>
+            <th>Reviews</th>
+            <th>Action</th>
+            <th>The Challenges</th>
         </tr>
-        <% data.Challenges.forEach((challenge, i) => { %>
+        </thead>
+        <tbody>
+        <% data.forEach((e, i) => { %>
             <tr>
                 <td><%= i + 1 %></td>
-                <td><%= challenge.title %></td>
-                <td><%= challenge.challengeDetail %></td>
+                <td><img src="<%= e.imageUrl %>" alt="<%= e.title %>" height="100"></td>
+                <td><%= e.title %></td>
+                <td><%= e.difficulty %></td>
+                <td><%= formatMoney(e.price) %></td>
+                <td><%= e.reviews %></td>
+                <td>
+                    <ul>
+                        <% e.Challenges.forEach(ch => { %>
+                            <li><%= ch.title %></li>
+                        <% }) %>
+                    </ul>
+                </td>
+                <td>
+                    <a href="/lectures/<%= e.id %>/buy">Buy This</a>
+                </td>
             </tr>
         <% }) %>
+        </tbody>
     </table>
-    <br>
-    <a href="/lectures/<%= data.id %>/buy">Buy This Lecture</a> | 
-    <a href="/lectures">Back to All Lectures</a>
-    
 </body>
 </html>

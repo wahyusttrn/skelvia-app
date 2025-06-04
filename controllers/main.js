@@ -5,7 +5,7 @@ class Main {
   static async homepage(req, res) {
     try {
       const { userId } = req.session;
-      const user = await User.findByPk(userId);
+      const user = await User.myFullProfiles(userId);
       res.render('homepage', { user });
     } catch (error) {
       res.send(error);
@@ -65,6 +65,27 @@ class Main {
     try {
       req.session.destroy();
       res.redirect('/login');
+    } catch (error) {
+      res.send(error);
+    }
+  }
+  static async renderAllUsers(req, res) {
+    try {
+      const data = await User.findAll();
+      res.render('allUsers', { data });
+    } catch (error) {
+      res.send(error);
+    }
+  }
+  static async deleteUser(req, res) {
+    try {
+      const { userId } = req.params;
+      await User.destroy({
+        where: {
+          id: userId
+        }
+      });
+      res.redirect('/');
     } catch (error) {
       res.send(error);
     }

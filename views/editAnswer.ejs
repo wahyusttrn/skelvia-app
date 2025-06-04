@@ -8,6 +8,9 @@
 <body>
   <h1><%= challenge.title %></h1>
   <h3><u>Question:</u> <%= challenge.challengeDetail %></h3>
+  <% if (error) { %>
+    <p style="color: red;"><%= error %></p>
+  <% } %>
   <form action="/myLectures/<%= challenge.LectureId %>/challenges/<%= challenge.id %>/edit" method="post">
     <label for="">Your previous Answer:</label>
     <br>

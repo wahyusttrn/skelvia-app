@@ -21,21 +21,18 @@
     </table>
 
     <h2>Profile Details</h2>
-    <% if (user.UserProfile) { %>
-        <table border="1">
-            <tr>
-                <th>Photo</th>
-                <th>About Me</th>
-                <th>Graduated Courses</th>
-            </tr>
-            <tr>
-                <td><img src="<%= user.UserProfile.profilePicUrl %>" width="100"></td>
-                <td><%= user.UserProfile.aboutMe %></td>
-                <td><%= user.UserProfile.sumGraduate %></td>
-            </tr>
-        </table>
-    <% } %>
+    <table border="1">
+        <tr>
+            <th>Photo</th>
+            <th>About Me</th>
+            <th>Lectures Graduated</th>
+        </tr>
+        <tr>
+            <td><img src="<%= user.UserProfile.profilePicUrl %>" width="100"></td>
+            <td><%= user.UserProfile.aboutMe %></td>
+            <td><%= user.UserProfile.sumGraduate %></td>
+        </tr>
+    </table>
     <br>
-    
 </body>
 </html>

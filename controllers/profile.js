@@ -3,9 +3,8 @@ const { User, UserProfile, Lecture, UserLecture } = require('../models/index');
 class Profile {
     static async showProfile(req, res) {
         try {
-            const userId = 1;
-            const user = await User.findOne({
-                where: { id: userId },
+            const { userId } = req.session;
+            const user = await User.findByPk(userId, {
                 include: UserProfile
             });
             
