@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture</title>
+</head>
+<body>
+
+    <h1>Lecture : <%= data.title %></h1>
+    <ul>
+        <% lectures.forEach(lecture => { %>
+            <% if (lecture.id !== data.id) { %>
+                <li><a href="/lectures/<%= lecture.id %>"><%= lecture.title %></a></li>
+            <% } %>
+        <% }) %>
+    </ul>
+
+    <br>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Challenge Title</th>
+            <th>Description</th>
+        </tr>
+        <% data.Challenges.forEach((challenge, i) => { %>
+            <tr>
+                <td><%= i + 1 %></td>
+                <td><%= challenge.title %></td>
+                <td><%= challenge.challengeDetail %></td>
+            </tr>
+        <% }) %>
+    </table>
+    <br>
+    <a href="/lectures/<%= data.id %>/buy">Buy This Lecture</a> | 
+    <a href="/lectures">Back to All Lectures</a>
+    
+</body>
+</html>
