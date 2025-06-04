@@ -6,6 +6,14 @@
   <title>Skelvia</title>
 </head>
 <body>
-  <h1>Hello, Skelvians!</h1>
+  <nav>
+    <a href="/login">Login</a> ||
+    <a href="/register">Register</a>
+    <% if (user) { %>
+      <a href="/logout">Logout Bang</a>
+    <% } %>
+  </nav>
+  <h1>Hello, <%= user ? user.fullName : 'Skelvians' %>!</h1>
+  <p>Skelvia is a educational platform designed to bridge the gap between online courses, immersive bootcamps, and traditional form of education. It offers a highly curated, cohort-based learning experience where students can enroll in multiple classes with a maximum limit, ensuring focused and effective skill acquisition.</p>
 </body>
 </html>
