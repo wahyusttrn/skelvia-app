@@ -37,7 +37,9 @@ module.exports = (sequelize, DataTypes) => {
     username: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
+      unique: {
+        msg: 'Username udah ada'
+      },
       validate: {
         notNull: {
           msg: 'Username cannot be Null'
@@ -50,7 +52,9 @@ module.exports = (sequelize, DataTypes) => {
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
+      unique: {
+        msg: 'Email udah ada'
+      },
       validate: {
         notNull: {
           msg: 'Email cannot be Null'

@@ -1,4 +1,4 @@
-const { User } = require('../models/index');
+const { User, UserProfile } = require('../models/index');
 const { comparePass } = require('../helpers/helper');
 
 class Main {
@@ -47,18 +47,28 @@ class Main {
   }
   static async renderRegister(req, res) {
     try {
-      res.render('register');
+      const { error } = req.query;
+      res.render('register', { error });
     } catch (error) {
       res.send(error);
     }
   }
   static async handlerRegister(req, res) {
     try {
-      const { fullName, username, email, password } = req.body;
-      await User.create({ fullName, username, email, password });
+      const { fullName, username, email, password, profilePicUrl, aboutMe } = req.body;
+      const createUser = await User.create({ fullName, username, email, password });
+      await UserProfile.create({ profilePicUrl, aboutMe, sumGraduate: 0, UserId: createUser.id });
       res.redirect('/login');
     } catch (error) {
-      res.send(error);
+      if (error.name === 'SequelizeValidationError' || error.name === 'SequelizeUniqueConstraintError') {
+        const errorMsg = error.errors.map((e) => {
+          return e.message;
+        });
+
+        res.redirect(`/register?error=${errorMsg}`);
+      } else {
+        res.send(error);
+      }
     }
   }
   static async handlerLogout(req, res) {

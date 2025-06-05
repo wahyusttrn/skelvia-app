@@ -80,6 +80,3 @@ POST '/myLectures/:lectureId/challenges/:challengeId' __(POST answer)__
 GET '/myLectures/:lectureId/challenges/:challengeId/edit' __(Edit answer)__
 POST '/myLectures/:lectureId/challenges/:challengeId/edit' __(POST answer)__
 GET '/myLectures/:lectureId/challenges/:challengeId/delete' __(Delete answer)__
-
-
-====== beda role, beda fitur!
