@@ -1,55 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skelvia</title>
-</head>
-<body>
-    <h1>All our Lectures</h1>
-    <% if (error) { %>
-        <p style="color: tomato;"><%= error %></p>
-    <% } %>
-    <form action="/lectures" method="get">
-        <input type="text" name="search" placeholder="search here...">
-        <button value="SUBMIT" type="submit">Search</button>
-    </form>
-    <br>
-    <table border="1">
-        <thead>
-        <tr>
-            <th>No.</th>
-            <th>Image</th>
-            <th>Title</th>
-            <th>Difficulty</th>
-            <th>Price</th>
-            <th>Reviews</th>
-            <th>Action</th>
-            <th>The Challenges</th>
-        </tr>
-        </thead>
-        <tbody>
-        <% data.forEach((e, i) => { %>
-            <tr>
-                <td><%= i + 1 %></td>
-                <td><img src="<%= e.imageUrl %>" alt="<%= e.title %>" height="100"></td>
-                <td><%= e.title %></td>
-                <td><%= e.difficulty %></td>
-                <td><%= formatMoney(e.price) %></td>
-                <td><%= e.reviews %></td>
-                <td>
-                    <ul>
-                        <% e.Challenges.forEach(ch => { %>
-                            <li><%= ch.title %></li>
-                        <% }) %>
-                    </ul>
-                </td>
-                <td>
-                    <a href="/lectures/<%= e.id %>/buy">Buy This</a>
-                </td>
-            </tr>
-        <% }) %>
-        </tbody>
-    </table>
-</body>
-</html>
+<%- include('./partials/_top.ejs') %>
+<main class="w-screen px-32">
+  <h1 class="mb-5 text-5xl font-bold text-center py-20">All our Lectures</h1>
+  <% if (error) { %>
+  <p style="color: tomato"><%= error %></p>
+  <% } %>
+  <form action="/lectures" method="get">
+    <label class="input">
+      <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </g>
+      </svg>
+      <input type="text" name="search" placeholder="Search" />
+    </label>
+    <button class="btn" value="SUBMIT" type="submit">Search</button>
+  </form>
+  <br />
+  <div class="flex flex-wrap gap-5 justify-center">
+    <% data.forEach((e, i) => { %>
+    <div class="card bg-base-100 w-96 shadow-sm">
+      <figure class="h-50">
+        <img src="<%= e.imageUrl %>" alt="<%= e.title %>" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title"><%= e.title %></h2>
+        <p>
+          <% e.Challenges.forEach(ch => { %>
+          <li><%= ch.title %></li>
+          <% }) %>
+        </p>
+        <div class="flex gap-2 pb-5">
+          <div class="badge badge-outline badge-sm"><%= formatMoney(e.price) %></div>
+          <div class="badge badge-outline badge-sm"><%= e.difficulty %></div>
+          <div class="badge badge-outline badge-sm"><%= e.reviews %></div>
+        </div>
+        <div class="card-actions justify-end">
+          <a href="/lectures/<%= e.id %>/buy" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</main>
+<%- include('./partials/_bottom.ejs') %>
